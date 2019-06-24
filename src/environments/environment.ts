@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  useHash: false,
+  serverUrl: 'https://cors-anywhere.herokuapp.com/https://mobile.ilucca-dev.net',
+  bearer: '985979b9e6662a61384d0bf4c46e4fe9890e849a',
 };
 
 /*

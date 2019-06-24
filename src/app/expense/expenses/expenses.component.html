@@ -1,0 +1,14 @@
+<app-expense-list
+  class="list"
+  [expenses]="expenses$ | async"
+  (editExpense)="editExpense($event)"
+  (createExpense)="createExpense($event)"
+  (deleteExpense)="deleteExpense($event)"
+></app-expense-list>
+
+<app-expense-form
+  [expense]=""
+  (create)="createExpense($event)"
+  (edit)="editExpense($event)"
+  (delete)="deleteExpense($event)"
+></app-expense-form>

@@ -1,0 +1,14 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let expense of expenses; trackBy: trackByFn">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{expense.nature}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{expense.purchasedOn | date}} - {{expense.originalAmount.amount}} {{expense.originalAmount.currency}} - {{expense.comment}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <app-expense-form [expense]="expense" (edit)="editExpense.emit($event)" (delete)="deleteExpense.emit($event)"></app-expense-form>
+  </mat-expansion-panel>
+</mat-accordion>
